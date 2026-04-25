@@ -64,13 +64,3 @@ A second version located in a subfolder that includes advanced interactive featu
 - Management tools
 
 Ideal for photographers who want client interaction or online sales.
-
-## Folder Structure
-
-```text
-/photography-template
-/interactive-edition
-/assets
-/images
-/styles
-/scripts
