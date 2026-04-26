@@ -1,0 +1,294 @@
+/* Urban Street Template Styles */
+:root {
+    --primary: #1a1a1a;
+    --accent: #FF00FF;
+    --highlight: #00FFFF;
+    --bg: #0a0a0a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg);
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 2px solid var(--accent);
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 600px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-family: 'Courier Prime', monospace;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: var(--accent);
+    text-shadow: 0 0 20px var(--accent);
+}
+
+.hero-content p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--highlight);
+}
+
+/* Bio */
+.bio {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.bio-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+/* Themes */
+.themes {
+    padding: 40px 0;
+}
+
+.theme-tags {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* Gallery */
+.gallery-preview {
+    padding: 60px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: contrast(1.2);
+    transition: all 0.3s;
+}
+
+.gallery-item img:hover {
+    filter: contrast(1.2) brightness(1.1);
+}
+
+/* CTA */
+.cta {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 40px;
+    background: var(--accent);
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    transition: all 0.2s;
+}
+
+.button:hover {
+    background: var(--highlight);
+    box-shadow: 0 0 20px var(--highlight);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary);
+    padding: 40px 0;
+    border-top: 2px solid var(--accent);
+    text-align: center;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: var(--accent);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--highlight);
+    text-shadow: 0 0 10px var(--highlight);
+}
+
+/* Contact */
+.contact {
+    padding: 60px 0;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--highlight);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: var(--primary);
+    border: 1px solid var(--accent);
+    color: white;
+    font-family: inherit;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+.submit-btn:hover {
+    background: var(--highlight);
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}

@@ -51,7 +51,7 @@ A clean static version ideal for:
 - Event photographers  
 - Studio landing pages
 
-### 2. Interactive Edition (`/interactive-edition`)
+### 2. Interactive Design (`/Interactive Design`)
 
 A second version located in a subfolder that includes advanced interactive features such as:
 

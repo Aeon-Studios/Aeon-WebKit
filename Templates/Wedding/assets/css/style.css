@@ -1,0 +1,291 @@
+/* Wedding Template Styles */
+:root {
+    --primary: #8B4789;
+    --secondary: #D4A5A5;
+    --accent: #f5e6e6;
+    --text: #2c2c2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background: white;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 550px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: rgba(255,255,255,0.95);
+    padding: 40px 60px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--text);
+}
+
+/* About */
+.about {
+    padding: 60px 0;
+    background: var(--accent);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--primary);
+}
+
+.about-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Services */
+.services {
+    padding: 60px 0;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.packages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.package {
+    text-align: center;
+    padding: 40px;
+    border: 1px solid var(--secondary);
+    transition: all 0.3s;
+}
+
+.package.featured {
+    background: var(--accent);
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+}
+
+.package h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.duration {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+/* Gallery */
+.gallery-preview {
+    padding: 60px 0;
+}
+
+.gallery-preview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.wedding-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.wedding-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.cta-container {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 40px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: var(--secondary);
+}
+
+/* Footer */
+.footer {
+    background: var(--accent);
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid var(--secondary);
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: var(--secondary);
+}
+
+/* Contact Form */
+.contact {
+    padding: 60px 0;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--primary);
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    font-family: inherit;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--secondary);
+}
+
+@media (max-width: 768px) {
+    .packages {
+        grid-template-columns: 1fr;
+    }
+    
+    .package.featured {
+        transform: scale(1);
+    }
+    
+    .wedding-grid {
+        grid-template-columns: 1fr;
+    }
+}
